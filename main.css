@@ -21,18 +21,17 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #141414; /* Background color for the entire website, including individual sections */
-  --default-color: #d9d9d9; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #ededed; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #FF4191; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #1c1c1c; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #f5e6d1; /* Background color for the entire website, including individual sections */
+  --default-color: #131313; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #6e2e34; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #5e7b8b; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #dc97a5; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #845747; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
-
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #d9d9d9;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ff4d4f; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #5e7b8b; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #2e2e2e; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #2e2e2e; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #d9d9d9; /* Used for navigation links of the dropdown items in the navigation menu. */
@@ -65,7 +64,7 @@
 body {
   color: var(--default-color);
   background-color: var(--background-color);
-  font-family: var(--default-font);
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -1710,9 +1709,9 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Services Section
+# services Section
 --------------------------------------------------------------*/
-.services .service-item {
+.services .services-item {
   background: var(--surface-color);
   border: 2px solid color-mix(in srgb, var(--default-color), transparent 90%);
   border-radius: 16px;
@@ -1724,7 +1723,7 @@ section,
   overflow: hidden;
 }
 
-.services .service-item::before {
+.services .services-item::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1737,36 +1736,36 @@ section,
   transition: transform 0.3s ease;
 }
 
-.services .service-item:hover {
+.services .services-item:hover {
   border-color: var(--accent-color);
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
-.services .service-item:hover::before {
+.services .services-item:hover::before {
   transform: scaleX(1);
 }
 
-.services .service-item:hover .icon-wrapper {
+.services .services-item:hover .icon-wrapper {
   background: var(--accent-color);
   color: var(--contrast-color);
   transform: rotate(5deg) scale(1.05);
 }
 
-.services .service-item:hover .read-more {
+.services .services-item:hover .read-more {
   color: var(--accent-color);
 }
 
-.services .service-item:hover .read-more i {
+.services .services-item:hover .read-more i {
   transform: translateX(5px);
 }
 
-.services .service-item.featured {
+.services .services-item.featured {
   border-color: var(--accent-color);
   box-shadow: 0 10px 30px rgba(54, 144, 231, 0.15);
 }
 
-.services .service-item.featured::before {
+.services .services-item.featured::before {
   transform: scaleX(1);
 }
 
@@ -1911,7 +1910,7 @@ section,
 }
 
 @media (max-width: 768px) {
-  .services .service-item {
+  .services .services-item {
     padding: 30px 20px;
     margin-bottom: 20px;
   }
@@ -2656,7 +2655,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Service Details Section
+#  Service Details Section
 --------------------------------------------------------------*/
 .service-details .sticky-sidebar {
   position: sticky;
@@ -2829,7 +2828,7 @@ section,
   line-height: 1.6;
 }
 
-.service-details .contact-card .contact-methods {
+.services-details .contact-card .contact-methods {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -2866,7 +2865,7 @@ section,
 }
 
 .service-details .service-overview .overview-header {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.3rem;
 }
 
 .service-details .service-overview .overview-header .badge {
